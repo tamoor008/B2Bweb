@@ -68,35 +68,35 @@ export default function ReviewsPage() {
     <div className="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto space-y-16">
       {/* Header */}
       <div className="text-center space-y-4 max-w-3xl mx-auto">
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-400/15 border border-amber-400/30 text-amber-400 text-xs font-semibold uppercase tracking-wider">
-          <Star className="w-3.5 h-3.5 fill-amber-400" /> Athlete Ratings & Results
+        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-50 border border-amber-200 text-amber-700 text-xs font-semibold uppercase tracking-wider">
+          <Star className="w-3.5 h-3.5 fill-amber-500" /> Athlete Ratings & Results
         </div>
-        <h1 className="text-3xl sm:text-5xl font-extrabold text-white">
+        <h1 className="text-3xl sm:text-5xl font-extrabold text-slate-900">
           Real Stories, <span className="gradient-purple-text">Real PR Gains</span>
         </h1>
-        <p className="text-slate-300 text-sm sm:text-base">
+        <p className="text-slate-600 text-sm sm:text-base">
           Over 15,000 lifters and athletes rely on Back to Basics programs for consistent athletic growth.
         </p>
       </div>
 
       {/* Ratings Overview Bar */}
-      <div className="b2b-card rounded-2xl p-6 border border-[#26262B] max-w-2xl mx-auto grid grid-cols-3 gap-4 text-center">
+      <div className="b2b-card rounded-2xl p-6 border border-slate-200 max-w-2xl mx-auto grid grid-cols-3 gap-4 text-center bg-white shadow-md">
         <div>
-          <p className="text-3xl font-extrabold text-white">4.9 / 5</p>
-          <div className="flex items-center justify-center gap-0.5 text-amber-400 mt-1">
+          <p className="text-3xl font-extrabold text-slate-900">4.9 / 5</p>
+          <div className="flex items-center justify-center gap-0.5 text-amber-500 mt-1">
             {[...Array(5)].map((_, i) => (
-              <Star key={i} className="w-3.5 h-3.5 fill-amber-400" />
+              <Star key={i} className="w-3.5 h-3.5 fill-amber-500" />
             ))}
           </div>
-          <p className="text-[11px] text-slate-400 mt-1">Average App Rating</p>
+          <p className="text-[11px] text-slate-500 mt-1">Average App Rating</p>
         </div>
-        <div className="border-x border-[#26262B]">
-          <p className="text-3xl font-extrabold text-[#A78BFA]">15,000+</p>
-          <p className="text-[11px] text-slate-400 mt-3">Active Lifters</p>
+        <div className="border-x border-slate-200">
+          <p className="text-3xl font-extrabold text-[#7C3AED]">15,000+</p>
+          <p className="text-[11px] text-slate-500 mt-3">Active Lifters</p>
         </div>
         <div>
-          <p className="text-3xl font-extrabold text-white">98.4%</p>
-          <p className="text-[11px] text-slate-400 mt-3">Program Finish Rate</p>
+          <p className="text-3xl font-extrabold text-slate-900">98.4%</p>
+          <p className="text-[11px] text-slate-500 mt-3">Program Finish Rate</p>
         </div>
       </div>
 
@@ -105,37 +105,37 @@ export default function ReviewsPage() {
         {reviews.map((r, i) => (
           <div
             key={i}
-            className="b2b-card rounded-2xl p-6 border border-[#26262B] flex flex-col justify-between"
+            className="b2b-card rounded-2xl p-6 border border-slate-200 flex flex-col justify-between"
           >
             <div className="space-y-4">
               <div className="flex items-center justify-between">
-                <div className="flex items-center gap-1 text-amber-400">
+                <div className="flex items-center gap-1 text-amber-500">
                   {[...Array(r.rating)].map((_, s) => (
-                    <Star key={s} className="w-3.5 h-3.5 fill-amber-400" />
+                    <Star key={s} className="w-3.5 h-3.5 fill-amber-500" />
                   ))}
                 </div>
-                <span className="px-2.5 py-1 rounded-full bg-[#7C3AED]/15 border border-[#7C3AED]/30 text-[#A78BFA] text-xs font-bold">
+                <span className="px-2.5 py-1 rounded-full bg-[#7C3AED]/10 border border-[#7C3AED]/25 text-[#7C3AED] text-xs font-bold">
                   {r.metric}
                 </span>
               </div>
 
-              <p className="text-slate-300 text-xs sm:text-sm italic leading-relaxed">
+              <p className="text-slate-600 text-xs sm:text-sm italic leading-relaxed">
                 &quot;{r.text}&quot;
               </p>
             </div>
 
-            <div className="pt-6 mt-6 border-t border-[#26262B] space-y-3">
+            <div className="pt-6 mt-6 border-t border-slate-100 space-y-3">
               <div className="flex items-center gap-3">
                 <div className="w-9 h-9 rounded-full bg-[#7C3AED] text-white flex items-center justify-center font-bold text-xs">
                   {r.avatar}
                 </div>
                 <div>
-                  <h4 className="text-sm font-bold text-white">{r.name}</h4>
-                  <p className="text-[11px] text-slate-400">{r.role}</p>
+                  <h4 className="text-sm font-bold text-slate-900">{r.name}</h4>
+                  <p className="text-[11px] text-slate-500">{r.role}</p>
                 </div>
               </div>
 
-              <p className="text-[10px] text-slate-500 font-mono">
+              <p className="text-[10px] text-slate-400 font-mono">
                 Completed: {r.programUsed}
               </p>
             </div>
@@ -144,9 +144,9 @@ export default function ReviewsPage() {
       </div>
 
       {/* CTA Box */}
-      <div className="b2b-card rounded-3xl p-8 border border-[#26262B] text-center space-y-4 max-w-xl mx-auto">
-        <h3 className="text-2xl font-bold text-white">Join 15,000+ Athletes Today</h3>
-        <p className="text-slate-300 text-xs sm:text-sm">
+      <div className="b2b-card rounded-3xl p-8 border border-slate-200 text-center space-y-4 max-w-xl mx-auto bg-white shadow-lg">
+        <h3 className="text-2xl font-bold text-slate-900">Join 15,000+ Athletes Today</h3>
+        <p className="text-slate-600 text-xs sm:text-sm">
           Get notified as soon as the Back to Basics mobile app launches on iOS & Android.
         </p>
         <button

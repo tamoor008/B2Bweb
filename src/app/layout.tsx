@@ -35,9 +35,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} dark scroll-smooth antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} light scroll-smooth antialiased`}
     >
-      <body className="min-h-screen bg-[#0C0C0E] text-white selection:bg-[#7C3AED] selection:text-white font-sans flex flex-col justify-between">
+      <body className="min-h-screen bg-[#F8FAFC] text-slate-900 selection:bg-[#7C3AED] selection:text-white font-sans flex flex-col justify-between">
         <div>
           <Navbar />
           <main>{children}</main>
