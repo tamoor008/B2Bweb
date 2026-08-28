@@ -31,7 +31,7 @@ export default function PricingPage() {
           Simple, Transparent <span className="gradient-purple-text">App Membership</span>
         </h1>
         <p className="text-slate-300 text-sm sm:text-base">
-          All program access and subscription memberships are handled natively inside the Back2Basics Mobile App on iOS & Android. No web payments required.
+          All program access and subscription memberships are handled natively inside the Back to Basics Mobile App on iOS & Android. No web payments required.
         </p>
 
         {/* Store Badges Row */}
@@ -49,7 +49,7 @@ export default function PricingPage() {
         <div className="space-y-1 text-xs sm:text-sm">
           <h4 className="font-bold text-white">No Web Subscriptions</h4>
           <p className="text-slate-300 leading-relaxed">
-            Subscriptions and program unlocks are processed through the official Apple App Store and Google Play Store when you log into the Back2Basics mobile app.
+            Subscriptions and program unlocks are processed through the official Apple App Store and Google Play Store when you log into the Back to Basics mobile app.
           </p>
         </div>
       </div>

@@ -49,7 +49,7 @@ export default function MobileAppComingSoonModal({
           <div className="w-16 h-16 rounded-2xl overflow-hidden bg-[#16161A] border border-[#26262B] shadow-xl shadow-[#7C3AED]/20 flex items-center justify-center p-2">
             <Image
               src="/icon.png"
-              alt="Back2Basics App Icon"
+              alt="Back to Basics Coaching LLC App Icon"
               width={64}
               height={64}
               className="object-cover rounded-xl"
@@ -68,7 +68,7 @@ export default function MobileAppComingSoonModal({
                 {program ? `Join "${program.title}"` : actionTitle}
               </h3>
               <p className="text-slate-300 text-xs sm:text-sm leading-relaxed max-w-md mx-auto">
-                Back2Basics programs and subscriptions are exclusive to our mobile app. The iOS and Android apps are releasing soon! Enter your email to get early access & launch discount.
+                Back to Basics programs and subscriptions are exclusive to our mobile app. The iOS and Android apps are releasing soon! Enter your email to get early access & launch discount.
               </p>
             </div>
 
@@ -112,7 +112,7 @@ export default function MobileAppComingSoonModal({
             <div className="space-y-1">
               <h4 className="text-xl font-bold text-white">You&apos;re on the VIP List!</h4>
               <p className="text-slate-300 text-xs sm:text-sm">
-                We saved your spot for <span className="text-[#A78BFA]">{email}</span>. We will send you an exclusive invite as soon as the Back2Basics iOS & Android app drops!
+                We saved your spot for <span className="text-[#A78BFA]">{email}</span>. We will send you an exclusive invite as soon as the Back to Basics iOS & Android app drops!
               </p>
             </div>
 

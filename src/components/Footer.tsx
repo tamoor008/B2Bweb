@@ -26,7 +26,7 @@ export default function Footer() {
               />
             </div>
             <div className="flex flex-col">
-              <span className="text-lg font-extrabold text-white">Back2Basics</span>
+              <span className="text-lg font-extrabold text-white">Back to Basics</span>
               <span className="text-[10px] text-[#A78BFA] font-semibold -mt-1">
                 Back to Basics Coaching LLC
               </span>
@@ -105,7 +105,7 @@ export default function Footer() {
         {/* Links 3: Mobile Apps Badges */}
         <div className="space-y-3">
           <h4 className="text-white font-bold text-sm uppercase tracking-wider">Upcoming App</h4>
-          <p className="text-xs text-slate-400">Releasing soon for iOS & Android:</p>
+          <p className="text-xs text-slate-400">Available soon for iOS & Android:</p>
           <div className="space-y-2 pt-1">
             <AppleAppStoreBadge onClick={() => setModalOpen(true)} />
             <GooglePlayBadge onClick={() => setModalOpen(true)} />

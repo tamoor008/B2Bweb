@@ -14,7 +14,7 @@ export default function ReviewsPage() {
       avatar: "MV",
       rating: 5,
       metric: "+35 lbs Squat PR",
-      text: "Back2Basics transformed how I train. The structured programs took the guesswork out of my lifting cycles. Added 35 lbs to my squat in 12 weeks with zero knee pain!",
+      text: "Back to Basics transformed how I train. The structured programs took the guesswork out of my lifting cycles. Added 35 lbs to my squat in 12 weeks with zero knee pain!",
       programUsed: "Basics 101: Strength Foundations",
     },
     {
@@ -23,7 +23,7 @@ export default function ReviewsPage() {
       avatar: "ER",
       rating: 5,
       metric: "Pain-Free Training",
-      text: "The video lessons detailing exercise technique are the highest quality I've seen in any app. I regularly recommend Back2Basics to my clients recovering from injury.",
+      text: "The video lessons detailing exercise technique are the highest quality I've seen in any app. I regularly recommend Back to Basics to my clients recovering from injury.",
       programUsed: "Bulletproof Joints & Mobility",
     },
     {
@@ -75,7 +75,7 @@ export default function ReviewsPage() {
           Real Stories, <span className="gradient-purple-text">Real PR Gains</span>
         </h1>
         <p className="text-slate-300 text-sm sm:text-base">
-          Over 15,000 lifters and athletes rely on Back2Basics programs for consistent athletic growth.
+          Over 15,000 lifters and athletes rely on Back to Basics programs for consistent athletic growth.
         </p>
       </div>
 
@@ -147,7 +147,7 @@ export default function ReviewsPage() {
       <div className="b2b-card rounded-3xl p-8 border border-[#26262B] text-center space-y-4 max-w-xl mx-auto">
         <h3 className="text-2xl font-bold text-white">Join 15,000+ Athletes Today</h3>
         <p className="text-slate-300 text-xs sm:text-sm">
-          Get notified as soon as the Back2Basics mobile app launches on iOS & Android.
+          Get notified as soon as the Back to Basics mobile app launches on iOS & Android.
         </p>
         <button
           onClick={() => setModalOpen(true)}

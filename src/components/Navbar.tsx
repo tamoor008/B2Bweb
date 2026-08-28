@@ -35,7 +35,7 @@ export default function Navbar() {
           </div>
           <div className="flex flex-col">
             <span className="text-xl font-extrabold tracking-tight text-white">
-              Back<span className="text-[#7C3AED]">2</span>Basics
+              Back <span className="text-[#7C3AED]">to</span> Basics
             </span>
             <span className="text-[9px] uppercase tracking-widest text-[#A78BFA] font-bold -mt-1">
               Coaching LLC

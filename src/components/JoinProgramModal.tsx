@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { X, CheckCircle2, Dumbbell, Smartphone, ArrowRight, Sparkles } from "lucide-react";
+import { X, CheckCircle2, Smartphone, ArrowRight, Sparkles } from "lucide-react";
 import { ProgramData } from "@/data/programs";
 
 interface JoinProgramModalProps {
@@ -122,16 +122,16 @@ export default function JoinProgramModal({ program, onClose }: JoinProgramModalP
             <div className="p-4 bg-[#1A1A1E] rounded-xl border border-[#26262B] text-left space-y-2 text-xs">
               <div className="flex items-center gap-2 text-white font-semibold">
                 <Smartphone className="w-4 h-4 text-[#7C3AED]" />
-                <span>Next Step: Open Back2Basics Mobile App</span>
+                <span>Next Step: Open Back to Basics Mobile App</span>
               </div>
               <p className="text-slate-400">
-                Sign in with <span className="text-white font-mono">{email}</span> in the Back2Basics mobile app on iOS or Android to log sets, view HD video lessons, and track personal records!
+                Sign in with <span className="text-white font-mono">{email}</span> in the Back to Basics mobile app on iOS or Android to log sets, view HD video lessons, and track personal records!
               </p>
             </div>
 
             <button
               onClick={onClose}
-              className="w-full py-3 rounded-xl bg-[#1A1A1E] hover:bg-[#26262B] text-slate-200 font-semibold text-sm border border-[#26262B]"
+              className="w-full py-2.5 rounded-xl bg-[#1A1A1E] hover:bg-[#26262B] text-slate-200 font-semibold text-xs border border-[#26262B]"
             >
               Close Window
             </button>

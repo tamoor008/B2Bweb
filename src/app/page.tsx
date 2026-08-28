@@ -12,7 +12,6 @@ import {
   ChevronRight,
   Star,
   Zap,
-  BookOpen,
   Sparkles,
   ArrowUpRight,
   Smartphone,
@@ -102,7 +101,7 @@ export default function Home() {
                     <Image src="/icon.png" alt="App Icon" width={36} height={36} />
                   </div>
                   <div>
-                    <p className="text-sm font-bold text-white">Back2Basics Mobile</p>
+                    <p className="text-sm font-bold text-white">Back to Basics Mobile</p>
                     <p className="text-[10px] text-[#A78BFA]">Back to Basics Coaching LLC</p>
                   </div>
                 </div>

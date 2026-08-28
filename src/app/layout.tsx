@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Back2Basics | Athletic Fitness & Program Platform",
-  description: "Master exercise fundamentals with structured workout programs, video lessons, equipment guides, and athletic progress tracking.",
+  title: "Back to Basics | Athletic Fitness & Strength Coaching",
+  description: "Master exercise fundamentals with structured workout programs, video lessons, equipment guides, and athletic progress tracking by Back to Basics Coaching LLC.",
   icons: {
     icon: "/favicon.png",
     shortcut: "/favicon.png",
