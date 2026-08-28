@@ -30,17 +30,25 @@ export default function MobileAppComingSoonModal({
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/60 backdrop-blur-md animate-in fade-in duration-200">
-      <div className="relative w-full max-w-lg rounded-3xl bg-white p-6 sm:p-8 border border-slate-200 shadow-2xl space-y-6 text-slate-900 text-center overflow-hidden">
+    <div
+      onClick={onClose}
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/60 backdrop-blur-md animate-in fade-in duration-200 cursor-pointer"
+    >
+      <div
+        onClick={(e) => e.stopPropagation()}
+        className="relative w-full max-w-lg rounded-3xl bg-white p-6 sm:p-8 border border-slate-200 shadow-2xl space-y-6 text-slate-900 text-center overflow-hidden cursor-default"
+      >
         {/* Decorative background glow */}
         <div className="absolute -top-24 left-1/2 -translate-x-1/2 w-64 h-64 bg-[#7C3AED]/15 blur-3xl rounded-full pointer-events-none" />
 
-        {/* Close Button */}
+        {/* Close Button - Entire button box is clickable */}
         <button
+          type="button"
           onClick={onClose}
-          className="absolute top-4 right-4 p-2 rounded-xl bg-slate-100 text-slate-400 hover:text-slate-900 transition-colors border border-slate-200"
+          aria-label="Close modal"
+          className="absolute top-4 right-4 z-30 w-10 h-10 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-500 hover:text-slate-900 transition-colors border border-slate-200 flex items-center justify-center cursor-pointer select-none"
         >
-          <X className="w-5 h-5" />
+          <X className="w-5 h-5 pointer-events-none" />
         </button>
 
         {/* Icon & Badge */}
@@ -90,7 +98,7 @@ export default function MobileAppComingSoonModal({
                 />
                 <button
                   type="submit"
-                  className="px-6 py-3 rounded-xl bg-[#7C3AED] hover:bg-[#6D28D9] text-white font-bold text-sm shadow-lg shadow-[#7C3AED]/25 transition-all flex items-center justify-center gap-2 whitespace-nowrap"
+                  className="px-6 py-3 rounded-xl bg-[#7C3AED] hover:bg-[#6D28D9] text-white font-bold text-sm shadow-lg shadow-[#7C3AED]/25 transition-all flex items-center justify-center gap-2 whitespace-nowrap cursor-pointer"
                 >
                   <Bell className="w-4 h-4" />
                   <span>Notify Me</span>
@@ -117,7 +125,7 @@ export default function MobileAppComingSoonModal({
 
             <button
               onClick={onClose}
-              className="w-full py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 font-semibold text-xs border border-slate-200 transition-colors"
+              className="w-full py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 font-semibold text-xs border border-slate-200 transition-colors cursor-pointer"
             >
               Back to Website
             </button>
