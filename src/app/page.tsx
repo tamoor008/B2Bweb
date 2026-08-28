@@ -82,7 +82,7 @@ export default function Home() {
                 <p className="text-xs sm:text-sm text-slate-500 mt-0.5">Mobile Focused</p>
               </div>
               <div>
-                <p className="text-2xl sm:text-3xl font-extrabold text-[#7C3AED]">45+</p>
+                <p className="text-2xl sm:text-3xl font-extrabold text-[#7C3AED]">15+</p>
                 <p className="text-xs sm:text-sm text-slate-500 mt-0.5">Coaching Programs</p>
               </div>
               <div>

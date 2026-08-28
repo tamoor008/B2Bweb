@@ -119,7 +119,7 @@ export default function PricingPage() {
             <ul className="space-y-3 text-xs text-slate-700">
               <li className="flex items-center gap-2 font-semibold text-slate-900">
                 <Check className="w-4 h-4 text-[#7C3AED]" />
-                <span>All 45+ Curated Training Programs</span>
+                <span>All 15+ Curated Training Programs</span>
               </li>
               <li className="flex items-center gap-2">
                 <Check className="w-4 h-4 text-[#7C3AED]" />
