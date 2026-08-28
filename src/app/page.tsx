@@ -58,8 +58,9 @@ export default function Home() {
 
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
               <button
+                type="button"
                 onClick={() => setModalOpen(true)}
-                className="w-full sm:w-auto px-8 py-4 bg-[#7C3AED] hover:bg-[#6D28D9] text-white font-bold rounded-xl shadow-lg shadow-[#7C3AED]/25 flex items-center justify-center gap-3 transition-all transform hover:-translate-y-0.5 text-base"
+                className="w-full sm:w-auto px-8 py-4 bg-[#7C3AED] hover:bg-[#6D28D9] text-white font-bold rounded-xl shadow-lg shadow-[#7C3AED]/25 flex items-center justify-center gap-3 transition-all transform hover:-translate-y-0.5 text-base cursor-pointer"
               >
                 <Smartphone className="w-5 h-5 text-white" />
                 <span>Get App Early Access</span>
@@ -68,7 +69,7 @@ export default function Home() {
 
               <Link
                 href="/features"
-                className="w-full sm:w-auto px-7 py-4 bg-white hover:bg-slate-50 text-slate-700 font-semibold rounded-xl border border-slate-200 flex items-center justify-center gap-2.5 transition-all text-base shadow-xs"
+                className="w-full sm:w-auto px-7 py-4 bg-white hover:bg-slate-50 text-slate-800 font-semibold rounded-xl border border-slate-200 flex items-center justify-center gap-2.5 transition-all text-base shadow-xs"
               >
                 <PlayCircle className="w-5 h-5 text-[#7C3AED]" />
                 <span>Upcoming App Features</span>
@@ -79,22 +80,22 @@ export default function Home() {
             <div className="pt-8 border-t border-slate-200 grid grid-cols-3 gap-4 sm:gap-6">
               <div>
                 <p className="text-2xl sm:text-3xl font-extrabold text-slate-900">100%</p>
-                <p className="text-xs sm:text-sm text-slate-500 mt-0.5">Mobile Focused</p>
+                <p className="text-xs sm:text-sm text-slate-600 font-medium mt-0.5">Mobile Focused</p>
               </div>
               <div>
                 <p className="text-2xl sm:text-3xl font-extrabold text-[#7C3AED]">15+</p>
-                <p className="text-xs sm:text-sm text-slate-500 mt-0.5">Coaching Programs</p>
+                <p className="text-xs sm:text-sm text-slate-600 font-medium mt-0.5">Coaching Programs</p>
               </div>
               <div>
                 <p className="text-2xl sm:text-3xl font-extrabold text-slate-900">HD Video</p>
-                <p className="text-xs sm:text-sm text-slate-500 mt-0.5">Technique Cues</p>
+                <p className="text-xs sm:text-sm text-slate-600 font-medium mt-0.5">Technique Cues</p>
               </div>
             </div>
           </div>
 
           {/* Right Column: Mobile App Preview Mockup */}
           <div className="lg:col-span-5 relative">
-            <div className="relative b2b-card rounded-2xl p-6 border border-slate-200 shadow-xl space-y-5">
+            <div className="relative b2b-card rounded-2xl p-6 border border-slate-200 shadow-xl space-y-5 bg-white">
               <div className="flex items-center justify-between pb-4 border-b border-slate-100">
                 <div className="flex items-center gap-3">
                   <div className="w-9 h-9 rounded-xl overflow-hidden bg-white border border-slate-200 shadow-2xs">
@@ -116,13 +117,13 @@ export default function Home() {
                   <span className="text-[#7C3AED] font-bold uppercase tracking-wider">
                     Basics 101 • Week 2 Day 1
                   </span>
-                  <span className="text-slate-500">45 Mins</span>
+                  <span className="text-slate-600 font-medium">45 Mins</span>
                 </div>
                 <h3 className="text-lg font-bold text-slate-900">
                   Barbell Back Squat & Lower Body Focus
                 </h3>
                 <div className="space-y-1.5">
-                  <div className="flex justify-between text-xs text-slate-600 font-medium">
+                  <div className="flex justify-between text-xs text-slate-700 font-semibold">
                     <span>Target Session Completion</span>
                     <span className="text-[#7C3AED] font-bold">75%</span>
                   </div>
@@ -132,7 +133,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="pt-2 flex items-center justify-between text-xs text-slate-500">
+              <div className="pt-2 flex items-center justify-between text-xs text-slate-600 font-medium">
                 <span className="flex items-center gap-1.5">
                   <ShieldCheck className="w-4 h-4 text-[#7C3AED]" /> iOS & Android Release
                 </span>
@@ -168,7 +169,7 @@ export default function Home() {
           {featuredPrograms.map((program) => (
             <div
               key={program.id}
-              className="b2b-card b2b-card-hover rounded-2xl p-6 flex flex-col justify-between"
+              className="b2b-card b2b-card-hover rounded-2xl p-6 flex flex-col justify-between bg-white border border-slate-200"
             >
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
@@ -188,7 +189,7 @@ export default function Home() {
               </div>
 
               <div className="pt-6 mt-6 border-t border-slate-100 space-y-4">
-                <div className="grid grid-cols-2 gap-2 text-xs text-slate-600">
+                <div className="grid grid-cols-2 gap-2 text-xs text-slate-600 font-medium">
                   <div className="flex items-center gap-1.5">
                     <Clock className="w-4 h-4 text-[#7C3AED]" />
                     <span>{program.duration}</span>
@@ -201,14 +202,15 @@ export default function Home() {
 
                 <div className="flex items-center gap-2">
                   <button
+                    type="button"
                     onClick={() => handleProgramClick(program)}
-                    className="flex-1 py-2.5 rounded-xl bg-[#7C3AED] hover:bg-[#6D28D9] text-white text-xs font-bold transition-all shadow-md"
+                    className="flex-1 py-2.5 rounded-xl bg-[#7C3AED] hover:bg-[#6D28D9] text-white text-xs font-bold transition-all shadow-md cursor-pointer"
                   >
                     Join Program
                   </button>
                   <Link
                     href={`/programs/${program.id}`}
-                    className="px-3 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold border border-slate-200 transition-colors"
+                    className="px-3 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-semibold border border-slate-200 transition-colors"
                   >
                     Details
                   </Link>
@@ -248,22 +250,22 @@ export default function Home() {
             <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
               <Trophy className="w-6 h-6 text-[#7C3AED]" />
               <h4 className="text-sm font-bold text-slate-900">Program Engine</h4>
-              <p className="text-xs text-slate-500">Targeted weight & set progression.</p>
+              <p className="text-xs text-slate-600">Targeted weight & set progression.</p>
             </div>
             <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
               <Video className="w-6 h-6 text-indigo-600" />
               <h4 className="text-sm font-bold text-slate-900">HD Video Lessons</h4>
-              <p className="text-xs text-slate-500">Multi-angle posture breakdowns.</p>
+              <p className="text-xs text-slate-600">Multi-angle posture breakdowns.</p>
             </div>
             <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
               <Dumbbell className="w-6 h-6 text-amber-500" />
               <h4 className="text-sm font-bold text-slate-900">Equipment Guide</h4>
-              <p className="text-xs text-slate-500">Gym or home gear filters.</p>
+              <p className="text-xs text-slate-600">Gym or home gear filters.</p>
             </div>
             <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
               <Smartphone className="w-6 h-6 text-emerald-600" />
               <h4 className="text-sm font-bold text-slate-900">Offline Log Sync</h4>
-              <p className="text-xs text-slate-500">Log workouts without cellular data.</p>
+              <p className="text-xs text-slate-600">Log workouts without cellular data.</p>
             </div>
           </div>
         </div>
