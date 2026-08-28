@@ -25,7 +25,7 @@ export default function Navbar() {
         <Link href="/" className="flex items-center gap-3 group">
           <div className="relative w-10 h-10 rounded-xl overflow-hidden shadow-md shadow-[#7C3AED]/20 group-hover:scale-105 transition-transform bg-[#16161A] border border-[#26262B] flex items-center justify-center">
             <Image
-              src="/icon.png"
+              src="/roundiconb2b.png"
               alt="Back to Basics Coaching LLC App Icon"
               width={40}
               height={40}

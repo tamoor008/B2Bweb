@@ -48,7 +48,7 @@ export default function MobileAppComingSoonModal({
         <div className="flex flex-col items-center space-y-3 relative z-10 pt-2">
           <div className="w-16 h-16 rounded-2xl overflow-hidden bg-[#16161A] border border-[#26262B] shadow-xl shadow-[#7C3AED]/20 flex items-center justify-center p-2">
             <Image
-              src="/icon.png"
+              src="/roundiconb2b.png"
               alt="Back to Basics Coaching LLC App Icon"
               width={64}
               height={64}

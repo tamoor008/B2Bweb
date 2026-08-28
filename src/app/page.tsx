@@ -98,7 +98,7 @@ export default function Home() {
               <div className="flex items-center justify-between pb-4 border-b border-[#26262B]">
                 <div className="flex items-center gap-3">
                   <div className="w-9 h-9 rounded-xl overflow-hidden bg-[#1A1A1E] border border-[#26262B]">
-                    <Image src="/icon.png" alt="App Icon" width={36} height={36} />
+                    <Image src="/roundiconb2b.png" alt="App Icon" width={36} height={36} />
                   </div>
                   <div>
                     <p className="text-sm font-bold text-white">Back to Basics Mobile</p>

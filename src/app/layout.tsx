@@ -18,9 +18,12 @@ export const metadata: Metadata = {
   title: "Back to Basics | Athletic Fitness & Strength Coaching",
   description: "Master exercise fundamentals with structured workout programs, video lessons, equipment guides, and athletic progress tracking by Back to Basics Coaching LLC.",
   icons: {
-    icon: "/favicon.png",
+    icon: [
+      { url: "/favicon.png", type: "image/png" },
+      { url: "/roundiconb2b.png", type: "image/png" },
+    ],
     shortcut: "/favicon.png",
-    apple: "/icon.png",
+    apple: "/roundiconb2b.png",
   },
 };
 

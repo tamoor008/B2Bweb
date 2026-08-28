@@ -18,7 +18,7 @@ export default function Footer() {
           <div className="flex items-center gap-3">
             <div className="w-9 h-9 rounded-xl overflow-hidden bg-[#16161A] border border-[#26262B] flex items-center justify-center">
               <Image
-                src="/icon.png"
+                src="/roundiconb2b.png"
                 alt="Back to Basics Coaching LLC App Icon"
                 width={36}
                 height={36}
