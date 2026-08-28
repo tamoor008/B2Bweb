@@ -16,6 +16,7 @@ export default function Navbar() {
     { name: "App Features", href: "/features" },
     { name: "Reviews", href: "/reviews" },
     { name: "Pricing Info", href: "/pricing" },
+    { name: "Support", href: "/support" },
   ];
 
   return (
@@ -44,7 +45,7 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop Links */}
-        <nav className="hidden md:flex items-center gap-8 text-sm font-medium">
+        <nav className="hidden md:flex items-center gap-7 text-sm font-medium">
           {navLinks.map((link) => {
             const isActive = pathname === link.href;
             return (

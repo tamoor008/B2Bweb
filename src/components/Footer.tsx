@@ -75,28 +75,28 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Links 2: Platform Features */}
+        {/* Links 2: Support & Company */}
         <div className="space-y-3">
-          <h4 className="text-slate-900 font-extrabold text-sm uppercase tracking-wider">App Features</h4>
+          <h4 className="text-slate-900 font-extrabold text-sm uppercase tracking-wider">Support & Help</h4>
           <ul className="space-y-2 text-xs">
             <li>
-              <Link href="/features" className="hover:text-[#7C3AED] transition-colors">
-                Workout Session Logger
+              <Link href="/support" className="hover:text-[#7C3AED] transition-colors">
+                Customer Support
+              </Link>
+            </li>
+            <li>
+              <Link href="/privacy" className="hover:text-[#7C3AED] transition-colors">
+                Privacy Policy
+              </Link>
+            </li>
+            <li>
+              <Link href="/terms" className="hover:text-[#7C3AED] transition-colors">
+                Terms & Conditions
               </Link>
             </li>
             <li>
               <Link href="/features" className="hover:text-[#7C3AED] transition-colors">
-                HD Video Lessons
-              </Link>
-            </li>
-            <li>
-              <Link href="/features" className="hover:text-[#7C3AED] transition-colors">
-                Equipment Directory
-              </Link>
-            </li>
-            <li>
-              <Link href="/reviews" className="hover:text-[#7C3AED] transition-colors">
-                Athlete Testimonials
+                App Features
               </Link>
             </li>
           </ul>
@@ -116,8 +116,9 @@ export default function Footer() {
       <div className="pt-8 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-slate-500">
         <p>© {new Date().getFullYear()} Back to Basics Coaching LLC. All rights reserved.</p>
         <div className="flex items-center gap-6">
-          <a href="#" className="hover:text-slate-900">Privacy Policy</a>
-          <a href="#" className="hover:text-slate-900">Terms of Service</a>
+          <Link href="/support" className="hover:text-slate-900">Support Center</Link>
+          <Link href="/privacy" className="hover:text-slate-900">Privacy Policy</Link>
+          <Link href="/terms" className="hover:text-slate-900">Terms of Service</Link>
         </div>
       </div>
 
