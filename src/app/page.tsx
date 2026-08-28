@@ -10,28 +10,28 @@ import {
   Trophy,
   PlayCircle,
   ChevronRight,
-  CheckCircle2,
   Star,
-  Users,
-  Activity,
   Zap,
   BookOpen,
   Sparkles,
   ArrowUpRight,
   Smartphone,
-  Check,
   Clock,
-  BarChart3,
   Video,
-  CirclePlay,
 } from "lucide-react";
 import { PROGRAMS, ProgramData } from "@/data/programs";
-import JoinProgramModal from "@/components/JoinProgramModal";
+import MobileAppComingSoonModal from "@/components/MobileAppComingSoonModal";
 
 export default function Home() {
   const [selectedProgram, setSelectedProgram] = useState<ProgramData | null>(null);
+  const [modalOpen, setModalOpen] = useState(false);
 
   const featuredPrograms = PROGRAMS.slice(0, 3);
+
+  const handleProgramClick = (program: ProgramData) => {
+    setSelectedProgram(program);
+    setModalOpen(true);
+  };
 
   return (
     <div className="relative space-y-24 pb-20">
@@ -45,7 +45,7 @@ export default function Home() {
           <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
             <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-[#16161A] border border-[#26262B] text-[#A78BFA] text-xs font-semibold shadow-inner">
               <Sparkles className="w-4 h-4 text-[#7C3AED]" />
-              <span>Athletic Fitness & Workout Program Platform</span>
+              <span>Back to Basics Coaching LLC • Upcoming Mobile App</span>
             </div>
 
             <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight text-white leading-[1.15]">
@@ -54,40 +54,41 @@ export default function Home() {
             </h1>
 
             <p className="text-slate-300 text-base sm:text-lg lg:text-xl max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-              Eliminate guessing from your fitness routine. Back2Basics delivers battle-tested workout programs, step-by-step video lessons, equipment guides, and athletic progress tracking.
+              Back to Basics Coaching LLC is bringing structured athletic strength programs, multi-angle HD video lessons, equipment guides, and progressive overload tracking to your phone in our upcoming mobile app.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
-              <Link
-                href="/programs"
+              <button
+                onClick={() => setModalOpen(true)}
                 className="w-full sm:w-auto px-8 py-4 bg-[#7C3AED] hover:bg-[#6D28D9] text-white font-bold rounded-xl shadow-lg shadow-[#7C3AED]/25 flex items-center justify-center gap-3 transition-all transform hover:-translate-y-0.5 text-base"
               >
-                <span>Browse & Join Programs</span>
+                <Smartphone className="w-5 h-5 text-white" />
+                <span>Get App Early Access</span>
                 <ChevronRight className="w-5 h-5" />
-              </Link>
+              </button>
 
               <Link
                 href="/features"
                 className="w-full sm:w-auto px-7 py-4 bg-[#16161A] hover:bg-[#26262B] text-slate-200 font-semibold rounded-xl border border-[#26262B] flex items-center justify-center gap-2.5 transition-all text-base"
               >
                 <PlayCircle className="w-5 h-5 text-[#A78BFA]" />
-                <span>Explore Features</span>
+                <span>Upcoming App Features</span>
               </Link>
             </div>
 
             {/* Stats Grid */}
             <div className="pt-8 border-t border-[#26262B] grid grid-cols-3 gap-4 sm:gap-6">
               <div>
-                <p className="text-2xl sm:text-3xl font-extrabold text-white">15,000+</p>
-                <p className="text-xs sm:text-sm text-slate-400 mt-0.5">Active Athletes</p>
+                <p className="text-2xl sm:text-3xl font-extrabold text-white">100%</p>
+                <p className="text-xs sm:text-sm text-slate-400 mt-0.5">Mobile Focused</p>
               </div>
               <div>
                 <p className="text-2xl sm:text-3xl font-extrabold text-[#A78BFA]">45+</p>
-                <p className="text-xs sm:text-sm text-slate-400 mt-0.5">Curated Programs</p>
+                <p className="text-xs sm:text-sm text-slate-400 mt-0.5">Coaching Programs</p>
               </div>
               <div>
-                <p className="text-2xl sm:text-3xl font-extrabold text-white">98.4%</p>
-                <p className="text-xs sm:text-sm text-slate-400 mt-0.5">Goal Completion</p>
+                <p className="text-2xl sm:text-3xl font-extrabold text-white">HD Video</p>
+                <p className="text-xs sm:text-sm text-slate-400 mt-0.5">Technique Cues</p>
               </div>
             </div>
           </div>
@@ -102,11 +103,11 @@ export default function Home() {
                   </div>
                   <div>
                     <p className="text-sm font-bold text-white">Back2Basics Mobile</p>
-                    <p className="text-[10px] text-[#A78BFA]">Active Session</p>
+                    <p className="text-[10px] text-[#A78BFA]">Back to Basics Coaching LLC</p>
                   </div>
                 </div>
                 <span className="px-2.5 py-1 rounded-full bg-[#7C3AED]/20 text-[#A78BFA] text-xs font-semibold">
-                  Workout Mode
+                  App Preview
                 </span>
               </div>
 
@@ -123,7 +124,7 @@ export default function Home() {
                 </h3>
                 <div className="space-y-1.5">
                   <div className="flex justify-between text-xs text-slate-300">
-                    <span>Progress</span>
+                    <span>Target Session Completion</span>
                     <span className="text-[#A78BFA] font-bold">75%</span>
                   </div>
                   <div className="w-full bg-[#26262B] h-2 rounded-full overflow-hidden">
@@ -134,29 +135,32 @@ export default function Home() {
 
               <div className="pt-2 flex items-center justify-between text-xs text-slate-400">
                 <span className="flex items-center gap-1.5">
-                  <ShieldCheck className="w-4 h-4 text-[#7C3AED]" /> Auto Cloud Sync
+                  <ShieldCheck className="w-4 h-4 text-[#7C3AED]" /> iOS & Android Release
                 </span>
-                <span className="text-[#A78BFA] font-semibold">Synced with Mobile App</span>
+                <span className="text-[#A78BFA] font-semibold">Coming Soon</span>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* FEATURED PROGRAMS SECTION */}
+      {/* FEATURED APP PROGRAMS SECTION */}
       <section className="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row items-start md:items-end justify-between mb-10 gap-4">
           <div>
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#7C3AED]/15 border border-[#7C3AED]/30 text-[#A78BFA] text-xs font-semibold uppercase tracking-wider mb-2">
-              <Flame className="w-3.5 h-3.5" /> Structured Catalog
+              <Flame className="w-3.5 h-3.5" /> Structured App Catalog
             </div>
-            <h2 className="text-3xl font-extrabold text-white">Featured Training Programs</h2>
+            <h2 className="text-3xl font-extrabold text-white">Upcoming Mobile App Programs</h2>
+            <p className="text-slate-400 text-xs sm:text-sm mt-1">
+              Curated by certified strength trainers at Back to Basics Coaching LLC.
+            </p>
           </div>
           <Link
             href="/programs"
             className="text-sm font-semibold text-[#A78BFA] hover:text-white flex items-center gap-1"
           >
-            <span>View All Programs ({PROGRAMS.length})</span>
+            <span>Preview All Programs ({PROGRAMS.length})</span>
             <ChevronRight className="w-4 h-4" />
           </Link>
         </div>
@@ -198,7 +202,7 @@ export default function Home() {
 
                 <div className="flex items-center gap-2">
                   <button
-                    onClick={() => setSelectedProgram(program)}
+                    onClick={() => handleProgramClick(program)}
                     className="flex-1 py-2.5 rounded-xl bg-[#7C3AED] hover:bg-[#6D28D9] text-white text-xs font-bold transition-all shadow-md"
                   >
                     Join Program
@@ -216,18 +220,18 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CORE PLATFORM FEATURES HIGHLIGHT */}
+      {/* MOBILE APP FEATURES HIGHLIGHT */}
       <section className="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="b2b-card rounded-3xl p-8 sm:p-12 border border-[#26262B] grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           <div className="lg:col-span-7 space-y-4">
             <span className="px-3.5 py-1.5 rounded-full bg-[#7C3AED]/15 border border-[#7C3AED]/30 text-[#A78BFA] text-xs font-semibold uppercase tracking-wider">
-              Platform Overview
+              Upcoming App Features
             </span>
             <h2 className="text-3xl font-extrabold text-white">
-              Built for Serious Athletic Progression
+              What You Will Get in the Mobile App
             </h2>
             <p className="text-slate-300 text-sm leading-relaxed max-w-xl">
-              Back2Basics combines structured program schedules, video technique cues, equipment guides, and personal record tracking into one seamless mobile experience.
+              Back to Basics Coaching LLC is designing our mobile app to streamline your workout sessions, track auto-regulated progressive overload, and provide form guidance wherever you train.
             </p>
 
             <div className="pt-2">
@@ -235,7 +239,7 @@ export default function Home() {
                 href="/features"
                 className="inline-flex items-center gap-2 text-sm font-bold text-[#A78BFA] hover:text-white"
               >
-                <span>Learn More About Features</span>
+                <span>Explore All Mobile App Features</span>
                 <ArrowUpRight className="w-4 h-4" />
               </Link>
             </div>
@@ -245,51 +249,33 @@ export default function Home() {
             <div className="p-4 rounded-xl bg-[#1A1A1E] border border-[#26262B] space-y-2">
               <Trophy className="w-6 h-6 text-[#7C3AED]" />
               <h4 className="text-sm font-bold text-white">Program Engine</h4>
-              <p className="text-xs text-slate-400">Targeted volume and progressive overload.</p>
+              <p className="text-xs text-slate-400">Targeted weight & set progression.</p>
             </div>
             <div className="p-4 rounded-xl bg-[#1A1A1E] border border-[#26262B] space-y-2">
               <Video className="w-6 h-6 text-[#A78BFA]" />
               <h4 className="text-sm font-bold text-white">HD Video Lessons</h4>
-              <p className="text-xs text-slate-400">Step-by-step lifting technique breakdowns.</p>
+              <p className="text-xs text-slate-400">Multi-angle posture breakdowns.</p>
             </div>
             <div className="p-4 rounded-xl bg-[#1A1A1E] border border-[#26262B] space-y-2">
               <Dumbbell className="w-6 h-6 text-amber-400" />
               <h4 className="text-sm font-bold text-white">Equipment Guide</h4>
-              <p className="text-xs text-slate-400">Match workouts to your available gear.</p>
+              <p className="text-xs text-slate-400">Gym or home gear filters.</p>
             </div>
             <div className="p-4 rounded-xl bg-[#1A1A1E] border border-[#26262B] space-y-2">
               <Smartphone className="w-6 h-6 text-emerald-400" />
-              <h4 className="text-sm font-bold text-white">Mobile Sync</h4>
-              <p className="text-xs text-slate-400">Offline workout logging on iOS & Android.</p>
+              <h4 className="text-sm font-bold text-white">Offline Log Sync</h4>
+              <p className="text-xs text-slate-400">Log workouts without cellular data.</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* REVIEWS SNAPSHOT */}
-      <section className="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto text-center space-y-6">
-        <div className="space-y-2">
-          <h2 className="text-3xl font-extrabold text-white">Loved by 15,000+ Lifters</h2>
-          <p className="text-slate-400 text-sm max-w-md mx-auto">
-            See how lifters are breaking through strength plateaus with Back2Basics.
-          </p>
-        </div>
-
-        <div className="pt-2">
-          <Link
-            href="/reviews"
-            className="px-6 py-3 rounded-xl bg-[#16161A] hover:bg-[#26262B] text-white font-semibold text-sm border border-[#26262B] inline-flex items-center gap-2"
-          >
-            <span>Read Athlete Reviews & Stories</span>
-            <ChevronRight className="w-4 h-4 text-[#A78BFA]" />
-          </Link>
-        </div>
-      </section>
-
-      {/* JOIN PROGRAM MODAL */}
-      <JoinProgramModal
+      {/* MOBILE APP COMING SOON MODAL */}
+      <MobileAppComingSoonModal
+        isOpen={modalOpen}
+        onClose={() => setModalOpen(false)}
         program={selectedProgram}
-        onClose={() => setSelectedProgram(null)}
+        actionTitle="Join Program Waitlist"
       />
     </div>
   );

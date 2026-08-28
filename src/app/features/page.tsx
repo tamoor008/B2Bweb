@@ -11,7 +11,7 @@ import {
   Zap,
   CheckCircle2,
   ArrowRight,
-  ShieldCheck,
+  Sparkles,
 } from "lucide-react";
 import MobileAppComingSoonModal from "@/components/MobileAppComingSoonModal";
 
@@ -21,10 +21,10 @@ export default function FeaturesPage() {
   const detailedFeatures = [
     {
       icon: Trophy,
-      title: "Structured Program Engine",
+      title: "Mobile Program Engine",
       subtitle: "Progressive Overload Blueprints",
       description:
-        "Choose from battle-tested training programs built for strength, hypertrophy, calisthenics, or athletic performance. Every program features exact weight targets, rep ranges, RPE targets, and rest timers.",
+        "Select training programs built by Back to Basics Coaching LLC for strength, hypertrophy, calisthenics, or athletic performance. The upcoming mobile app automatically tracks weight targets, rep ranges, RPE, and rest timers on your phone.",
       bullets: [
         "Automatic weight & set calculation based on previous attempt",
         "Customizable workout split variations for 3 to 5 day schedules",
@@ -36,9 +36,9 @@ export default function FeaturesPage() {
     {
       icon: Video,
       title: "Multi-Angle HD Video Lessons",
-      subtitle: "Master Exercise Mechanics",
+      subtitle: "Master Exercise Mechanics On Mobile",
       description:
-        "Never second-guess your form again. Access detailed video breakdown lessons recorded by certified strength coaches with front, side, and isometric angles for every complex movement.",
+        "Never second-guess your lifting form again. Stream video breakdowns recorded by Back to Basics Coaching LLC strength coaches directly inside the app with front, side, and isometric angles for complex lifts.",
       bullets: [
         "Audio form cues play before starting your work sets",
         "Common mistakes & injury prevention checklists",
@@ -49,7 +49,7 @@ export default function FeaturesPage() {
     },
     {
       icon: Dumbbell,
-      title: "Interactive Equipment Directory",
+      title: "Mobile Equipment Directory",
       subtitle: "Match Workouts to Your Available Gear",
       description:
         "Training in a commercial gym, home garage, or hotel? Filter programs and exercises by available gear so you always know what tools you need before hitting start.",
@@ -63,10 +63,10 @@ export default function FeaturesPage() {
     },
     {
       icon: BarChart3,
-      title: "Smart Analytics & PR Tracking",
+      title: "Smart App Analytics & PR Tracking",
       subtitle: "Visualize Your Athletic Growth",
       description:
-        "Track total volume lifted, personal best records (PRs), workout completion streaks, and body metric changes over time with automated charts.",
+        "Track total volume lifted, personal best records (PRs), workout completion streaks, and body metric changes over time with automated mobile charts.",
       bullets: [
         "Automatic estimated 1RM (One Rep Max) tracking",
         "Volume density & total tonnage logs",
@@ -91,10 +91,10 @@ export default function FeaturesPage() {
     },
     {
       icon: Users,
-      title: "Coach Form Review & Support",
-      subtitle: "Personalized Trainer Guidance",
+      title: "Coach Form Review & Feedback",
+      subtitle: "Personalized Coaching Guidance",
       description:
-        "Submit video recordings of your lifting sets directly through the app to receive technique feedback and joint angle corrections from certified trainers.",
+        "Submit video recordings of your lifting sets directly through the mobile app to receive technique feedback and joint angle corrections from certified trainers at Back to Basics Coaching LLC.",
       bullets: [
         "Direct coach video review comments",
         "Community Q&A and form breakdown threads",
@@ -110,13 +110,13 @@ export default function FeaturesPage() {
       {/* Header */}
       <div className="text-center space-y-4 max-w-3xl mx-auto">
         <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#7C3AED]/15 border border-[#7C3AED]/30 text-[#A78BFA] text-xs font-semibold uppercase tracking-wider">
-          <Zap className="w-3.5 h-3.5" /> Complete Platform Capabilities
+          <Sparkles className="w-3.5 h-3.5" /> Back to Basics Coaching LLC
         </div>
         <h1 className="text-3xl sm:text-5xl font-extrabold text-white">
-          Engineered for <span className="gradient-purple-text">Athletic Excellence</span>
+          Features Coming to Our <span className="gradient-purple-text">Mobile App</span>
         </h1>
         <p className="text-slate-300 text-sm sm:text-base">
-          Back2Basics provides everything you need to eliminate training guesswork, build raw strength, and prevent joint injuries.
+          Back to Basics Coaching LLC is building a mobile application engineered to eliminate training guesswork, guide proper exercise form, and log athletic performance on iOS & Android.
         </p>
       </div>
 
@@ -135,7 +135,7 @@ export default function FeaturesPage() {
                 <span
                   className={`px-3 py-1 rounded-full text-[10px] font-extrabold uppercase border ${feat.badge}`}
                 >
-                  Feature #{idx + 1}
+                  App Feature #{idx + 1}
                 </span>
               </div>
 
@@ -165,7 +165,7 @@ export default function FeaturesPage() {
                 onClick={() => setModalOpen(true)}
                 className="w-full py-2.5 rounded-xl bg-[#1A1A1E] hover:bg-[#7C3AED] text-slate-300 hover:text-white font-semibold text-xs border border-[#26262B] transition-all flex items-center justify-center gap-1.5"
               >
-                <span>Mobile App Coming Soon</span>
+                <span>Notify Me on App Launch</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </button>
             </div>
@@ -177,7 +177,7 @@ export default function FeaturesPage() {
       <MobileAppComingSoonModal
         isOpen={modalOpen}
         onClose={() => setModalOpen(false)}
-        actionTitle="Explore Platform Features"
+        actionTitle="Explore Mobile App Features"
       />
     </div>
   );

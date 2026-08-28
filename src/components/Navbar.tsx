@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { Menu, X, Smartphone, ChevronRight } from "lucide-react";
+import { Menu, X, Smartphone } from "lucide-react";
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -13,7 +13,7 @@ export default function Navbar() {
   const navLinks = [
     { name: "Home", href: "/" },
     { name: "Programs", href: "/programs" },
-    { name: "Features", href: "/features" },
+    { name: "App Features", href: "/features" },
     { name: "Reviews", href: "/reviews" },
     { name: "Pricing Info", href: "/pricing" },
   ];
@@ -26,7 +26,7 @@ export default function Navbar() {
           <div className="relative w-10 h-10 rounded-xl overflow-hidden shadow-md shadow-[#7C3AED]/20 group-hover:scale-105 transition-transform bg-[#16161A] border border-[#26262B] flex items-center justify-center">
             <Image
               src="/icon.png"
-              alt="Back2Basics App Icon"
+              alt="Back to Basics Coaching LLC App Icon"
               width={40}
               height={40}
               className="object-cover"
@@ -37,8 +37,8 @@ export default function Navbar() {
             <span className="text-xl font-extrabold tracking-tight text-white">
               Back<span className="text-[#7C3AED]">2</span>Basics
             </span>
-            <span className="text-[10px] uppercase tracking-widest text-[#A78BFA] font-bold -mt-1">
-              Athletic Fitness
+            <span className="text-[9px] uppercase tracking-widest text-[#A78BFA] font-bold -mt-1">
+              Coaching LLC
             </span>
           </div>
         </Link>
@@ -72,14 +72,14 @@ export default function Navbar() {
             href="/programs"
             className="text-sm font-semibold text-slate-300 hover:text-white px-3 py-2 transition-colors"
           >
-            Explore Programs
+            Preview App Programs
           </Link>
           <a
             href="/pricing"
             className="px-4 py-2.5 rounded-xl bg-[#7C3AED] hover:bg-[#6D28D9] text-white font-semibold text-sm shadow-md shadow-[#7C3AED]/25 transition-all flex items-center gap-2"
           >
             <Smartphone className="w-4 h-4 text-white" />
-            <span>Get Mobile App</span>
+            <span>Upcoming App</span>
           </a>
         </div>
 
@@ -124,7 +124,7 @@ export default function Navbar() {
               className="w-full text-center py-3 bg-[#7C3AED] hover:bg-[#6D28D9] text-white font-bold rounded-xl flex items-center justify-center gap-2"
             >
               <Smartphone className="w-4 h-4" />
-              <span>Get Mobile App</span>
+              <span>Upcoming App</span>
             </a>
           </div>
         </div>
