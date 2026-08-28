@@ -3,8 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { ShieldCheck } from "lucide-react";
-import { AppleAppStoreBadge, GooglePlayBadge } from "@/components/StoreBadges";
+import { ShieldCheck, Smartphone, Sparkles } from "lucide-react";
 import MobileAppComingSoonModal from "@/components/MobileAppComingSoonModal";
 
 export default function Footer() {
@@ -102,13 +101,22 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Links 3: Mobile Apps Badges */}
+        {/* Links 3: Mobile Apps Notice */}
         <div className="space-y-3">
           <h4 className="text-slate-900 font-extrabold text-sm uppercase tracking-wider">Upcoming App</h4>
-          <p className="text-xs text-slate-500">Available soon for iOS & Android:</p>
-          <div className="space-y-2 pt-1">
-            <AppleAppStoreBadge onClick={() => setModalOpen(true)} />
-            <GooglePlayBadge onClick={() => setModalOpen(true)} />
+          <p className="text-xs text-slate-500">Releasing soon for iOS & Android:</p>
+          <div className="p-3 rounded-xl bg-white border border-slate-200 space-y-2">
+            <div className="flex items-center gap-2 text-xs font-bold text-slate-900">
+              <Smartphone className="w-4 h-4 text-[#7C3AED]" />
+              <span>Mobile App Launch</span>
+            </div>
+            <button
+              onClick={() => setModalOpen(true)}
+              className="w-full py-2 rounded-lg bg-[#7C3AED] hover:bg-[#6D28D9] text-white text-xs font-bold transition-all shadow-xs flex items-center justify-center gap-1"
+            >
+              <Sparkles className="w-3.5 h-3.5" />
+              <span>Get Early Access</span>
+            </button>
           </div>
         </div>
       </div>

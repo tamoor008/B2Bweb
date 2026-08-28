@@ -9,7 +9,6 @@ import {
   Info,
 } from "lucide-react";
 import MobileAppComingSoonModal from "@/components/MobileAppComingSoonModal";
-import { AppleAppStoreBadge, GooglePlayBadge } from "@/components/StoreBadges";
 
 export default function PricingPage() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -34,10 +33,15 @@ export default function PricingPage() {
           All program access and subscription memberships are handled natively inside the Back to Basics Mobile App on iOS & Android. No web payments required.
         </p>
 
-        {/* Store Badges Row */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
-          <AppleAppStoreBadge onClick={() => openSubscribeModal("iOS App Store Access")} />
-          <GooglePlayBadge onClick={() => openSubscribeModal("Google Play Store Access")} />
+        {/* Early Access Action */}
+        <div className="flex justify-center pt-2">
+          <button
+            onClick={() => openSubscribeModal("Mobile App Early Access")}
+            className="px-6 py-3 rounded-xl bg-[#7C3AED] hover:bg-[#6D28D9] text-white font-bold text-xs shadow-md shadow-[#7C3AED]/20 inline-flex items-center gap-2"
+          >
+            <Smartphone className="w-4 h-4" />
+            <span>Join App Early Access Waitlist</span>
+          </button>
         </div>
       </div>
 

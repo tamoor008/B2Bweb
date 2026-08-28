@@ -2,9 +2,8 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import { X, CheckCircle2, Bell, Sparkles } from "lucide-react";
+import { X, CheckCircle2, Bell, Sparkles, Smartphone } from "lucide-react";
 import { ProgramData } from "@/data/programs";
-import { AppleAppStoreBadge, GooglePlayBadge } from "@/components/StoreBadges";
 
 interface MobileAppComingSoonModalProps {
   isOpen: boolean;
@@ -72,14 +71,14 @@ export default function MobileAppComingSoonModal({
               </p>
             </div>
 
-            {/* App Store & Google Play Official Badges */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 max-w-sm mx-auto">
-              <AppleAppStoreBadge />
-              <GooglePlayBadge />
+            {/* Releasing Soon Indicator */}
+            <div className="p-3.5 rounded-2xl bg-slate-50 border border-slate-200 flex items-center justify-center gap-2 text-xs font-bold text-slate-800 max-w-xs mx-auto">
+              <Smartphone className="w-4 h-4 text-[#7C3AED]" />
+              <span>Coming Soon for iOS & Android</span>
             </div>
 
             {/* Waitlist Form */}
-            <form onSubmit={handleSubmit} className="space-y-3 pt-2">
+            <form onSubmit={handleSubmit} className="space-y-3 pt-1">
               <div className="flex flex-col sm:flex-row gap-2">
                 <input
                   type="email"
