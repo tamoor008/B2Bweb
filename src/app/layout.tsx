@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,8 +15,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Back2Basics | Strength, Athleticism & Fitness Fundamentals",
-  description: "Master exercise fundamentals with structured workout programs, step-by-step video lessons, equipment guides, and real-time progress tracking.",
+  title: "Back2Basics | Athletic Fitness & Program Platform",
+  description: "Master exercise fundamentals with structured workout programs, video lessons, equipment guides, and athletic progress tracking.",
+  icons: {
+    icon: "/favicon.png",
+    shortcut: "/favicon.png",
+    apple: "/icon.png",
+  },
 };
 
 export default function RootLayout({
@@ -27,8 +34,12 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} dark scroll-smooth antialiased`}
     >
-      <body className="min-h-screen bg-slate-950 text-slate-100 selection:bg-emerald-500 selection:text-slate-950 font-sans">
-        {children}
+      <body className="min-h-screen bg-[#0C0C0E] text-white selection:bg-[#7C3AED] selection:text-white font-sans flex flex-col justify-between">
+        <div>
+          <Navbar />
+          <main>{children}</main>
+        </div>
+        <Footer />
       </body>
     </html>
   );
