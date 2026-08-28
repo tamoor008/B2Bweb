@@ -2,8 +2,9 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import { X, Smartphone, CheckCircle2, Bell, Sparkles, Apple, Play } from "lucide-react";
+import { X, CheckCircle2, Bell, Sparkles } from "lucide-react";
 import { ProgramData } from "@/data/programs";
+import { AppleAppStoreBadge, GooglePlayBadge } from "@/components/StoreBadges";
 
 interface MobileAppComingSoonModalProps {
   isOpen: boolean;
@@ -71,16 +72,10 @@ export default function MobileAppComingSoonModal({
               </p>
             </div>
 
-            {/* App Store Mockup Badges */}
-            <div className="grid grid-cols-2 gap-3 max-w-xs mx-auto text-xs font-semibold">
-              <div className="p-3 rounded-xl bg-[#1A1A1E] border border-[#26262B] flex items-center justify-center gap-2 text-slate-300">
-                <Apple className="w-4 h-4 text-white" />
-                <span>App Store</span>
-              </div>
-              <div className="p-3 rounded-xl bg-[#1A1A1E] border border-[#26262B] flex items-center justify-center gap-2 text-slate-300">
-                <Play className="w-4 h-4 text-emerald-400" />
-                <span>Google Play</span>
-              </div>
+            {/* App Store & Google Play Official Badges */}
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 max-w-sm mx-auto">
+              <AppleAppStoreBadge />
+              <GooglePlayBadge />
             </div>
 
             {/* Waitlist Form */}

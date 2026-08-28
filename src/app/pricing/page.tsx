@@ -6,12 +6,10 @@ import {
   Check,
   Smartphone,
   Sparkles,
-  Apple,
-  Play,
-  ArrowRight,
   Info,
 } from "lucide-react";
 import MobileAppComingSoonModal from "@/components/MobileAppComingSoonModal";
+import { AppleAppStoreBadge, GooglePlayBadge } from "@/components/StoreBadges";
 
 export default function PricingPage() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -35,6 +33,12 @@ export default function PricingPage() {
         <p className="text-slate-300 text-sm sm:text-base">
           All program access and subscription memberships are handled natively inside the Back2Basics Mobile App on iOS & Android. No web payments required.
         </p>
+
+        {/* Store Badges Row */}
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
+          <AppleAppStoreBadge onClick={() => openSubscribeModal("iOS App Store Access")} />
+          <GooglePlayBadge onClick={() => openSubscribeModal("Google Play Store Access")} />
+        </div>
       </div>
 
       {/* Important Notice Banner */}
