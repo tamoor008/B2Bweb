@@ -8,7 +8,6 @@ import {
   BarChart3,
   Smartphone,
   Users,
-  Zap,
   CheckCircle2,
   ArrowRight,
   Sparkles,
@@ -24,7 +23,7 @@ export default function FeaturesPage() {
       title: "Mobile Program Engine",
       subtitle: "Progressive Overload Blueprints",
       description:
-        "Select training programs built by Back to Basics Coaching LLC for strength, hypertrophy, calisthenics, or athletic performance. The upcoming mobile app automatically tracks weight targets, rep ranges, RPE, and rest timers on your phone.",
+        "Select 1-on-1 training programs built by Back to Basics Coaching LLC for strength, hypertrophy, calisthenics, or athletic performance. The upcoming mobile app automatically tracks weight targets, rep ranges, RPE, and rest timers on your phone.",
       bullets: [
         "Automatic weight & set calculation based on previous attempt",
         "Customizable workout split variations for 3 to 5 day schedules",
@@ -38,7 +37,7 @@ export default function FeaturesPage() {
       title: "Multi-Angle HD Video Lessons",
       subtitle: "Master Exercise Mechanics On Mobile",
       description:
-        "Never second-guess your lifting form again. Stream video breakdowns recorded by Back to Basics Coaching LLC strength coaches directly inside the app with front, side, and isometric angles for complex lifts.",
+        "Never second-guess your lifting form again. Stream video breakdowns recorded by your 1-on-1 strength coach at Back to Basics Coaching LLC directly inside the app with front, side, and isometric angles for complex lifts.",
       bullets: [
         "Audio form cues play before starting your work sets",
         "Common mistakes & injury prevention checklists",
@@ -91,13 +90,13 @@ export default function FeaturesPage() {
     },
     {
       icon: Users,
-      title: "Coach Form Review & Feedback",
+      title: "1-on-1 Coach Form Review & Feedback",
       subtitle: "Personalized Coaching Guidance",
       description:
-        "Submit video recordings of your lifting sets directly through the mobile app to receive technique feedback and joint angle corrections from certified trainers at Back to Basics Coaching LLC.",
+        "Submit video recordings of your lifting sets directly through the mobile app to receive technique feedback and joint angle corrections from your 1-on-1 coach at Back to Basics Coaching LLC.",
       bullets: [
-        "Direct coach video review comments",
-        "Community Q&A and form breakdown threads",
+        "Direct 1-on-1 coach video review comments",
+        "Dedicated athlete-to-coach communication thread",
         "Personalized progression adjustments",
       ],
       color: "text-rose-600",
@@ -112,11 +111,11 @@ export default function FeaturesPage() {
         <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#7C3AED]/10 border border-[#7C3AED]/25 text-[#7C3AED] text-xs font-semibold uppercase tracking-wider">
           <Sparkles className="w-3.5 h-3.5" /> Back to Basics Coaching LLC
         </div>
-        <h1 className="text-3xl sm:text-5xl font-extrabold text-slate-900">
+        <h1 className="text-3xl sm:text-5xl font-extrabold text-[#0F172A]">
           Features Coming to Our <span className="gradient-purple-text">Mobile App</span>
         </h1>
         <p className="text-slate-600 text-sm sm:text-base">
-          Back to Basics Coaching LLC is building a mobile application engineered to eliminate training guesswork, guide proper exercise form, and log athletic performance on iOS & Android.
+          Back to Basics Coaching LLC is building a 1-on-1 mobile coaching application engineered to eliminate training guesswork, guide proper exercise form, and log athletic performance on iOS & Android.
         </p>
       </div>
 
@@ -125,7 +124,7 @@ export default function FeaturesPage() {
         {detailedFeatures.map((feat, idx) => (
           <div
             key={idx}
-            className="b2b-card b2b-card-hover rounded-3xl p-8 border border-slate-200 flex flex-col justify-between"
+            className="b2b-card b2b-card-hover rounded-3xl p-8 border border-slate-200 flex flex-col justify-between bg-white"
           >
             <div className="space-y-4">
               <div className="flex items-center justify-between">
@@ -138,7 +137,7 @@ export default function FeaturesPage() {
                 <p className="text-xs font-bold text-[#7C3AED] uppercase tracking-wider">
                   {feat.subtitle}
                 </p>
-                <h3 className="text-xl font-bold text-slate-900 mt-0.5">{feat.title}</h3>
+                <h3 className="text-xl font-bold text-[#0F172A] mt-0.5">{feat.title}</h3>
               </div>
 
               <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
@@ -157,8 +156,9 @@ export default function FeaturesPage() {
 
             <div className="pt-6 mt-6">
               <button
+                type="button"
                 onClick={() => setModalOpen(true)}
-                className="w-full py-2.5 rounded-xl bg-slate-100 hover:bg-[#7C3AED] text-slate-700 hover:text-white font-semibold text-xs border border-slate-200 transition-all flex items-center justify-center gap-1.5"
+                className="w-full py-2.5 rounded-xl bg-slate-100 hover:bg-[#7C3AED] text-slate-700 hover:text-white font-semibold text-xs border border-slate-200 transition-all flex items-center justify-center gap-1.5 cursor-pointer"
               >
                 <span>Notify Me on App Launch</span>
                 <ArrowRight className="w-3.5 h-3.5" />

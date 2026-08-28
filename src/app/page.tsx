@@ -44,16 +44,16 @@ export default function Home() {
           <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
             <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-[#7C3AED]/10 border border-[#7C3AED]/25 text-[#7C3AED] text-xs font-semibold shadow-2xs">
               <Sparkles className="w-4 h-4 text-[#7C3AED]" />
-              <span>Back to Basics Coaching LLC • Upcoming Mobile App</span>
+              <span>Back to Basics Coaching LLC • 1-on-1 Mobile Coaching</span>
             </div>
 
-            <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight text-slate-900 leading-[1.15]">
-              Master the Fundamentals. <br />
+            <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight text-[#0F172A] leading-[1.15]">
+              <span className="text-[#0F172A]">Master the Fundamentals.</span> <br />
               <span className="gradient-purple-text">Build Unstoppable Strength.</span>
             </h1>
 
-            <p className="text-slate-600 text-base sm:text-lg lg:text-xl max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-              Back to Basics Coaching LLC is bringing structured athletic strength programs, multi-angle HD video lessons, equipment guides, and progressive overload tracking to your phone in our upcoming mobile app.
+            <p className="text-slate-600 text-base sm:text-lg lg:text-xl max-w-2xl mx-auto lg:mx-0 leading-relaxed font-normal">
+              Back to Basics Coaching LLC brings structured 1-on-1 athletic strength programs, multi-angle HD video lessons, equipment guides, and progressive overload tracking to your phone in our upcoming mobile app.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
@@ -69,7 +69,7 @@ export default function Home() {
 
               <Link
                 href="/features"
-                className="w-full sm:w-auto px-7 py-4 bg-white hover:bg-slate-50 text-slate-800 font-semibold rounded-xl border border-slate-200 flex items-center justify-center gap-2.5 transition-all text-base shadow-xs"
+                className="w-full sm:w-auto px-7 py-4 bg-white hover:bg-slate-50 text-[#0F172A] font-semibold rounded-xl border border-slate-200 flex items-center justify-center gap-2.5 transition-all text-base shadow-xs"
               >
                 <PlayCircle className="w-5 h-5 text-[#7C3AED]" />
                 <span>Upcoming App Features</span>
@@ -79,15 +79,15 @@ export default function Home() {
             {/* Stats Grid */}
             <div className="pt-8 border-t border-slate-200 grid grid-cols-3 gap-4 sm:gap-6">
               <div>
-                <p className="text-2xl sm:text-3xl font-extrabold text-slate-900">100%</p>
-                <p className="text-xs sm:text-sm text-slate-600 font-medium mt-0.5">Mobile Focused</p>
+                <p className="text-2xl sm:text-3xl font-extrabold text-[#0F172A]">1-on-1</p>
+                <p className="text-xs sm:text-sm text-slate-600 font-medium mt-0.5">Dedicated Coach</p>
               </div>
               <div>
                 <p className="text-2xl sm:text-3xl font-extrabold text-[#7C3AED]">15+</p>
                 <p className="text-xs sm:text-sm text-slate-600 font-medium mt-0.5">Coaching Programs</p>
               </div>
               <div>
-                <p className="text-2xl sm:text-3xl font-extrabold text-slate-900">HD Video</p>
+                <p className="text-2xl sm:text-3xl font-extrabold text-[#0F172A]">HD Video</p>
                 <p className="text-xs sm:text-sm text-slate-600 font-medium mt-0.5">Technique Cues</p>
               </div>
             </div>
@@ -102,8 +102,8 @@ export default function Home() {
                     <Image src="/roundiconb2b.png" alt="App Icon" width={36} height={36} />
                   </div>
                   <div>
-                    <p className="text-sm font-bold text-slate-900">Back to Basics Mobile</p>
-                    <p className="text-[10px] text-[#7C3AED] font-semibold">Back to Basics Coaching LLC</p>
+                    <p className="text-sm font-bold text-[#0F172A]">Back to Basics Mobile</p>
+                    <p className="text-[10px] text-[#7C3AED] font-semibold">1-on-1 Strength Coaching</p>
                   </div>
                 </div>
                 <span className="px-2.5 py-1 rounded-full bg-[#7C3AED]/10 text-[#7C3AED] text-xs font-bold">
@@ -119,7 +119,7 @@ export default function Home() {
                   </span>
                   <span className="text-slate-600 font-medium">45 Mins</span>
                 </div>
-                <h3 className="text-lg font-bold text-slate-900">
+                <h3 className="text-lg font-bold text-[#0F172A]">
                   Barbell Back Squat & Lower Body Focus
                 </h3>
                 <div className="space-y-1.5">
@@ -151,9 +151,9 @@ export default function Home() {
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#7C3AED]/10 border border-[#7C3AED]/25 text-[#7C3AED] text-xs font-semibold uppercase tracking-wider mb-2">
               <Flame className="w-3.5 h-3.5" /> Structured App Catalog
             </div>
-            <h2 className="text-3xl font-extrabold text-slate-900">Upcoming Mobile App Programs</h2>
+            <h2 className="text-3xl font-extrabold text-[#0F172A]">Upcoming Mobile App Programs</h2>
             <p className="text-slate-600 text-xs sm:text-sm mt-1">
-              Curated by certified strength trainers at Back to Basics Coaching LLC.
+              Curated by your certified 1-on-1 strength coach at Back to Basics Coaching LLC.
             </p>
           </div>
           <Link
@@ -182,7 +182,7 @@ export default function Home() {
                   </div>
                 </div>
 
-                <h3 className="text-xl font-bold text-slate-900">{program.title}</h3>
+                <h3 className="text-xl font-bold text-[#0F172A]">{program.title}</h3>
                 <p className="text-slate-600 text-xs leading-relaxed line-clamp-3">
                   {program.description}
                 </p>
@@ -228,11 +228,11 @@ export default function Home() {
             <span className="px-3.5 py-1.5 rounded-full bg-[#7C3AED]/10 border border-[#7C3AED]/25 text-[#7C3AED] text-xs font-semibold uppercase tracking-wider">
               Upcoming App Features
             </span>
-            <h2 className="text-3xl font-extrabold text-slate-900">
+            <h2 className="text-3xl font-extrabold text-[#0F172A]">
               What You Will Get in the Mobile App
             </h2>
             <p className="text-slate-600 text-sm leading-relaxed max-w-xl">
-              Back to Basics Coaching LLC is designing our mobile app to streamline your workout sessions, track auto-regulated progressive overload, and provide form guidance wherever you train.
+              Back to Basics Coaching LLC is designing our mobile app for 1-on-1 coaching: streamline workout sessions, track auto-regulated progressive overload, and provide form guidance wherever you train.
             </p>
 
             <div className="pt-2">
@@ -249,22 +249,22 @@ export default function Home() {
           <div className="lg:col-span-5 grid grid-cols-2 gap-4">
             <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
               <Trophy className="w-6 h-6 text-[#7C3AED]" />
-              <h4 className="text-sm font-bold text-slate-900">Program Engine</h4>
+              <h4 className="text-sm font-bold text-[#0F172A]">Program Engine</h4>
               <p className="text-xs text-slate-600">Targeted weight & set progression.</p>
             </div>
             <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
               <Video className="w-6 h-6 text-indigo-600" />
-              <h4 className="text-sm font-bold text-slate-900">HD Video Lessons</h4>
+              <h4 className="text-sm font-bold text-[#0F172A]">HD Video Lessons</h4>
               <p className="text-xs text-slate-600">Multi-angle posture breakdowns.</p>
             </div>
             <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
               <Dumbbell className="w-6 h-6 text-amber-500" />
-              <h4 className="text-sm font-bold text-slate-900">Equipment Guide</h4>
+              <h4 className="text-sm font-bold text-[#0F172A]">Equipment Guide</h4>
               <p className="text-xs text-slate-600">Gym or home gear filters.</p>
             </div>
             <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
               <Smartphone className="w-6 h-6 text-emerald-600" />
-              <h4 className="text-sm font-bold text-slate-900">Offline Log Sync</h4>
+              <h4 className="text-sm font-bold text-[#0F172A]">Offline Log Sync</h4>
               <p className="text-xs text-slate-600">Log workouts without cellular data.</p>
             </div>
           </div>
