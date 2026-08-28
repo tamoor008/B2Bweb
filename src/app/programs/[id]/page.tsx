@@ -2,20 +2,16 @@
 
 import React, { useState, use } from "react";
 import Link from "next/link";
-import { notFound } from "next/navigation";
 import {
   ArrowLeft,
   Star,
   Clock,
   Zap,
   Dumbbell,
-  CheckCircle2,
   Calendar,
-  Sparkles,
-  Layers,
 } from "lucide-react";
-import { PROGRAMS, ProgramData } from "@/data/programs";
-import JoinProgramModal from "@/components/JoinProgramModal";
+import { PROGRAMS } from "@/data/programs";
+import MobileAppComingSoonModal from "@/components/MobileAppComingSoonModal";
 
 interface PageProps {
   params: Promise<{ id: string }>;
@@ -138,13 +134,13 @@ export default function ProgramDetailPage({ params }: PageProps) {
         </div>
       </div>
 
-      {/* Modal */}
-      {showJoinModal && (
-        <JoinProgramModal
-          program={program}
-          onClose={() => setShowJoinModal(false)}
-        />
-      )}
+      {/* Mobile App Coming Soon Modal */}
+      <MobileAppComingSoonModal
+        isOpen={showJoinModal}
+        onClose={() => setShowJoinModal(false)}
+        program={program}
+        actionTitle="Join Program Waitlist"
+      />
     </div>
   );
 }

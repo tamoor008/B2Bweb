@@ -132,11 +132,7 @@ export default function FeaturesPage() {
                 <div className="w-12 h-12 rounded-2xl bg-[#1A1A1E] border border-[#26262B] flex items-center justify-center">
                   <feat.icon className={`w-6 h-6 ${feat.color}`} />
                 </div>
-                <span
-                  className={`px-3 py-1 rounded-full text-[10px] font-extrabold uppercase border ${feat.badge}`}
-                >
-                  App Feature #{idx + 1}
-                </span>
+
               </div>
 
               <div>

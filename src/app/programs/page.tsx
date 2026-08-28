@@ -9,20 +9,24 @@ import {
   Zap,
   Dumbbell,
   ChevronRight,
-  Filter,
-  Check,
 } from "lucide-react";
 import { PROGRAMS, ProgramData } from "@/data/programs";
-import JoinProgramModal from "@/components/JoinProgramModal";
+import MobileAppComingSoonModal from "@/components/MobileAppComingSoonModal";
 
 export default function ProgramsPage() {
   const [selectedCategory, setSelectedCategory] = useState<string>("All");
   const [selectedProgram, setSelectedProgram] = useState<ProgramData | null>(null);
+  const [modalOpen, setModalOpen] = useState(false);
 
   const filteredPrograms =
     selectedCategory === "All"
       ? PROGRAMS
       : PROGRAMS.filter((p) => p.category === selectedCategory);
+
+  const handleJoinClick = (program: ProgramData) => {
+    setSelectedProgram(program);
+    setModalOpen(true);
+  };
 
   return (
     <div className="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto space-y-10">
@@ -35,7 +39,7 @@ export default function ProgramsPage() {
           Choose Your Training <span className="gradient-purple-text">Program</span>
         </h1>
         <p className="text-slate-300 text-sm sm:text-base">
-          Browse battle-tested workout programs designed for strength, muscle building, calisthenics, and athletic conditioning. Join any program directly through web.
+          Browse workout programs designed for strength, muscle building, calisthenics, and athletic conditioning. Programs will be available exclusively inside our upcoming mobile app.
         </p>
 
         {/* Category Filters */}
@@ -100,7 +104,7 @@ export default function ProgramsPage() {
 
               <div className="flex items-center gap-2 pt-2">
                 <button
-                  onClick={() => setSelectedProgram(program)}
+                  onClick={() => handleJoinClick(program)}
                   className="flex-1 py-2.5 rounded-xl bg-[#7C3AED] hover:bg-[#6D28D9] text-white text-xs font-bold transition-all shadow-md flex items-center justify-center gap-1"
                 >
                   <span>Join Program</span>
@@ -118,10 +122,12 @@ export default function ProgramsPage() {
         ))}
       </div>
 
-      {/* Modal */}
-      <JoinProgramModal
+      {/* Mobile App Coming Soon Modal */}
+      <MobileAppComingSoonModal
+        isOpen={modalOpen}
+        onClose={() => setModalOpen(false)}
         program={selectedProgram}
-        onClose={() => setSelectedProgram(null)}
+        actionTitle="Join Program Waitlist"
       />
     </div>
   );
