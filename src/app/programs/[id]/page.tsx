@@ -69,7 +69,7 @@ export default function ProgramDetailPage({ params }: PageProps) {
         </div>
 
         {/* Quick Specs */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-4 border-t border-slate-100">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-4 border-t border-slate-100">
           <div className="flex items-center gap-3">
             <Clock className="w-5 h-5 text-[#7C3AED]" />
             <div>
@@ -86,7 +86,15 @@ export default function ProgramDetailPage({ params }: PageProps) {
             </div>
           </div>
 
-          <div className="flex items-center gap-3 col-span-2 sm:col-span-1">
+          <div className="flex items-center gap-3">
+            <Clock className="w-5 h-5 text-emerald-600" />
+            <div>
+              <p className="text-[10px] text-slate-500 uppercase font-bold">Avg Workout</p>
+              <p className="text-sm font-bold text-slate-900">{program.avgTime || "50 Mins"}</p>
+            </div>
+          </div>
+
+          <div className="flex items-center gap-3">
             <Dumbbell className="w-5 h-5 text-amber-500" />
             <div>
               <p className="text-[10px] text-slate-500 uppercase font-bold">Gear Needed</p>

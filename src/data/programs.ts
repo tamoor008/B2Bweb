@@ -5,6 +5,7 @@ export interface ProgramData {
   level: "Beginner" | "Intermediate" | "Advanced" | "All Levels";
   duration: string;
   frequency: string;
+  avgTime?: string;
   rating: number;
   reviewsCount: number;
   equipment: string;
