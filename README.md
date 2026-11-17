@@ -1,5 +1,23 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## Support subdomain (Vercel + GoDaddy)
+
+The host-specific rewrite in `next.config.ts` serves `/support` at
+`https://support.joinbacktobasics.com/`, keeping that URL in the browser.
+Other hosts, including `apply.joinbacktobasics.com`, retain their existing routes.
+
+1. Deploy this web app with the updated Next.js configuration to Vercel.
+2. In that Vercel project's Settings → Domains, add
+   `support.joinbacktobasics.com` as a production domain (not a redirect).
+3. In GoDaddy DNS for `joinbacktobasics.com`, add a CNAME with name `support`
+   and the exact target Vercel displays for that domain. Use the default TTL.
+   Do not modify the apex (`@`), `www`, or `apply` records.
+4. Wait for Vercel to verify DNS and provision HTTPS.
+5. Confirm the support subdomain displays the support page, `/privacy` works,
+   and the existing `apply` site still loads as before.
+
+App Store Connect Support URL: `https://support.joinbacktobasics.com/`.
+
 ## Getting Started
 
 First, run the development server:
